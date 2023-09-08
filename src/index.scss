@@ -1,0 +1,9 @@
+@import "./scss/reset";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+.container{
+    max-width: 1380px;
+    padding: 0 20px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}

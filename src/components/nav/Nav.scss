@@ -1,0 +1,15 @@
+.nav{
+    height: 80px;
+    width: 100%;
+    background-color: #cbcbcb;
+    .empty{
+        flex: 1;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        gap: 0 30px;
+    }
+}
