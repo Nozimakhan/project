@@ -1,0 +1,131 @@
+{
+    "subnavbar" : {
+        "main" : "Main"
+    },
+    "partners" : {
+        "partners": "Partners"
+    },
+    "about" : {
+        "about" : "About"
+    },
+    "contact" : {
+        "contact" : "Contact"
+    },
+    "input" : {
+        "placeholder" : "Search..."
+    },
+    "click" :{
+        "option" : "Select"
+    },
+    "addtocart" : {
+        "add" : "Add To Cart"
+    },
+    "store" : {
+        "basa" : "In The Store:"
+    },
+    "size" : {
+        "size" : "Size:"
+    },
+    "quantity" : {
+        "number" : "Quantity:"
+    },
+    "price" : {
+        "price" : "Price:"
+    },
+    "offerTitle" : {
+        "title" : "We offer to clients followings"
+    },
+    "first" : {
+        "offer" : "Purchase by installments"
+    },
+    "firstDesc" : {
+        "description" : "Convenient scheme for online ordering of products at MOLD-COMPONENTS.COM"
+    },
+    "second" : {
+        "offer" : "Free shipping"
+    },
+    "secondDesc" : {
+        "description" : "Quality products and services"
+    },
+    "third" : {
+        "offer" : "Bonus system"
+    },
+    "thirdDesc" : {
+        "description" : "Bonus system"
+    },
+    "four" : {
+        "offer" : "Help"
+    },
+    "fourDesc" : {
+        "description" : "FAQ"
+    },
+    "address" : {
+        "title" : "Our address"
+    },
+    "addressDesc" : {
+        "address" : "Namangan region , Davlatobod , street Do'stlik Shox 109-house"
+    },
+    "footerContact" : {
+        "title" : "Contact with us"
+    },
+    "footerMail" : {
+        "title" : "Mail address"
+    },
+    "footerContent" : {
+        "text" : "All mold making tools, mold components and accessories, mold chemicals, grinding and polishing tools, abrasive stones, CNC metal working machines, injection molding machines, etc."
+    },
+    "footerMedia" : {
+        "media" : "Follow us"
+    },
+    "links" : {
+        "title" : "Useful Links"
+    },
+    "offer": {
+        "title" : "For recommendations"
+    },
+    "offerText" : {
+        "content" : "For the convenience of regular customers and attracting new customers, this site was created where you can find the necessary parts, components, tools, catalogs and information about products. If you are unable to find something, do not hesitate to contact us by phone or mail, we will help you immediately."
+    },
+    "settings" : {
+        "text" : "Construction underway"
+    },
+    "aboutTitle" : {
+        "title" : "About us"
+    },
+    "greeting" :{
+        "text" : "Hello!"
+    },
+    "aboutFirst" : {
+        "text" : "We inform you that a store selling tools for the production and use of special molds has opened in Namangan!"
+    },
+    "aboutSecond" : {
+        "text" : "We will deliver everything you need to order and at a low price."
+    },
+    "types":{
+        "title" : "Main types of our products:"
+    },
+    "li1":{
+        "text": "Metalworking tools (Mandrels, cutters, drills, etc.)."
+    },
+    "li2":{
+        "text" : "Accessories for plastic molds and dies (flyers, pushers, springs, etc.)."
+    },
+    "li3":{
+        "text" : "Measuring tools (Calipers, micrometers, etc.)"
+    },
+    "li4":{
+        "text" : "Tools for metal polishing (Equipment and materials for polishing)."
+    },
+    "li5":{
+        "text" : "Mold oils (mold separation, mold cleaning, rust protection, etc.)"
+    },
+    "li6":{
+        "text" : "Equipment for processing metals by erosion (Electroerosive wire-cutting and copy-piercing machines)."
+    },
+    "li7":{
+        "text": "Equipment for metal processing under CNC control (CNC machining center for metal)"
+    },
+    "li8":{
+        "text" : "Equipment for molding plastic products (Injection molding machines)"
+    }
+}

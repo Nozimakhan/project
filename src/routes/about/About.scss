@@ -1,0 +1,22 @@
+.About__container{
+    font-size: 20px;
+    height: auto;
+    line-height: 34px;
+    margin: auto;
+    padding: 100px 0;
+    width: 90%;
+    h1{
+        font-weight: bolder;
+        font-size: 40px;
+        padding: 20px 0;
+    }
+    img{
+        margin: 30px 0;
+        width: 100%;
+    }
+    ul{
+        list-style: disc;
+        padding-left: 25px;
+        padding-top: 25px;
+    }
+}

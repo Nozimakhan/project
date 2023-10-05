@@ -1,0 +1,109 @@
+.login {
+    height: 100vh;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.login-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+    margin-left: 150px;
+    form {
+        width: 100%;
+        max-width: 500px;
+        h1 {
+            font-size: 34px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .input {
+            border: 1px solid gray;
+            border-radius: 10px;
+            font-size: 22px;
+            height: 60px;
+            margin: 20px 0;
+            outline: none;
+            text-indent: 10px;
+            width: 100%
+        }
+        .password-wrapper{
+            border: 1px solid gray;
+            border-radius: 10px;
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 2px;
+            input{
+                border: none;
+                font-size: 22px;
+                outline: none;
+                text-indent: 10px;
+                flex: 1;
+            }
+        }
+
+        button {
+            background-color: #0ab64f;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 22px;
+            height: 60px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 100%;
+            transition: 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover{
+                background-color: #fa972e;
+            }
+
+            &:active{
+                transform: scale(0.97);
+            }
+
+            &:disabled{
+                opacity: 0.5;
+            }
+        }
+    }
+
+    a {
+        color: #1e90ff;
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+.login-image {
+    display: grid;
+    place-items: center;
+    height: 100%;
+
+    img {
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
+        width: 80%;
+    }
+}
+
+.loading-icon{
+    animation: spin 0.5s ease-in-out infinite;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}

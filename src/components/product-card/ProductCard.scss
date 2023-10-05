@@ -1,0 +1,50 @@
+.product-card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fff;
+
+    .product-card__categories {
+        margin: 10px 0;
+        align-items: center;
+        display: flex;
+        height: 45px;
+        max-height: 45px;
+        flex-wrap: wrap;
+        gap: 5px 0;
+
+        span {
+            white-space: nowrap;
+            font-size: 12px;
+            padding: 5px;
+            background-color: #d8d7d7;
+            color: #5f5e5e;
+        }
+    }
+
+    .product-card__price {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+
+    img {
+        max-height: 230px;
+        min-height: 230px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    h3 {
+        text-align: left;
+        color: #4361ee;
+        font-weight: 500;
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+}

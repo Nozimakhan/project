@@ -1,0 +1,22 @@
+.category-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 40px 0;
+    min-height: 100vh;
+    h2{
+        text-align: start;
+        display: block;
+        width: 100%;
+        max-width: calc(325px * 3 + 40px);
+        font-size: 30px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .wrapper-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 325px);
+        gap: 20px;
+    
+    }
+}

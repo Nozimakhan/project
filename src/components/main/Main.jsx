@@ -1,26 +1,31 @@
 import React from 'react';
 import './Main.scss';
-import { useEffect, useState } from 'react';
-// import { instance } from '../../api/axios';
+import { useEffect, useState, Fragment } from 'react';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
+import ProductCraousel from '../product-carousel/ProductCraousel';
 
 const Main = () => {
-    const [homeReeldata, setHomeReeldata] = useState([]);
+  const [homeReeldata, setHomeReeldata] = useState([]);
 
-    useEffect(() => {
-        axios("https://tame-hen-baseball-cap.cyclic.app/product/all")
-            .then(response => setHomeReeldata(response.data))
-            .catch(err => console.log(err))
-    }, [])
-    console.log(homeReeldata);
+  useEffect(() => {
+    axios("https://mold-components.onrender.com/category/category-reel")
+      .then(response => setHomeReeldata(response.data))
+      .catch(err => console.log(err))
+  }, [])
 
   return (
-    <div>
+    <div className="container">
+      <div className='home__product-carousel'>
         {
-         homeReeldata?.allproducts?.slice(0, 4).map(product =>
-            <h2>{product.name}</h2>
-         )
+          homeReeldata.slice(0, 4).map(category =>
+            <Fragment key={uuidv4()}>
+              <h2>{localStorage.getItem("lang") === "uz" ? category.categoryName_uz : category.categoryName_ru}</h2>
+              <ProductCraousel categoryData={category} />
+            </Fragment>
+          )
         }
+      </div>
     </div>
   )
 }
