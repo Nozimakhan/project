@@ -111,7 +111,7 @@
             margin: 50px 0;
             .product-view__description {
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 gap: 0 10px;
     
                 p {
@@ -218,6 +218,7 @@
                     height: 65px;
                     justify-content: center;
                     gap: 0 10px;
+                    cursor: pointer;
                 }
             }
         }

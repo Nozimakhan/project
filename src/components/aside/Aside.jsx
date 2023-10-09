@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { instance } from '../../api/axios';
 import { Link } from 'react-router-dom';
 import { PiCaretRight } from 'react-icons/pi';
-const exceptionalRoutes = ["/product-view", "/login", "/partners", "/about", "/contact", "/admin"]
+import { useSelector } from 'react-redux';
 
 const Category = styled(AiOutlineAppstore)`
     color: #4361ee;
@@ -16,6 +16,7 @@ const Category = styled(AiOutlineAppstore)`
 `
 
 const Aside = () => {
+    const currentLng = useSelector(state => state.language.lang);
     const location = useLocation();
     const [categoryData, setCategoryData] = useState([]);
     useEffect(() => {
@@ -23,12 +24,12 @@ const Aside = () => {
             .then(response => setCategoryData(response.data))
             .catch(err => console.log(err))
     }, [])
-    return !exceptionalRoutes.includes(location.pathname) ?  (
+    return !location.pathname.includes("product-view") && !location.pathname.includes("partners") && !location.pathname.includes("about") && !location.pathname.includes("contact") ?  (
         <div className='aside'>
             <p className='aside-header'><Category />Категория</p>
             <ul className='aside__menu'>
                 {
-                    localStorage.getItem("lang") === "uz" ? categoryData?.mainCategory_uz?.map((mainCategoryItem, index) =>
+                    currentLng === "uz" ? categoryData?.mainCategory_uz?.map((mainCategoryItem, index) =>
                     <li key={index} className='aside__menu-item'>
                         <Link to={`/mainCategory/${mainCategoryItem}`}>{mainCategoryItem}</Link>
                         <PiCaretRight />

@@ -6,7 +6,6 @@ import './ProductCraousel.scss';
 import ProductCard from '../product-card/ProductCard';
 
 const ProductCraousel = ({ categoryData }) => {
-    console.log(categoryData.allRefinedProducts)
     return (
         <div>
             <Swiper
@@ -39,9 +38,9 @@ const ProductCraousel = ({ categoryData }) => {
                 className="mySwiper"
             >
                 {
-                    categoryData.allRefinedProducts.map(product =>
+                    categoryData.allRefinedProducts.map((product, i) =>
                         <SwiperSlide key={product._id}>
-                            <ProductCard productData={product} />
+                            <ProductCard key={i} productData={product} />
                         </SwiperSlide>
                     )
                 }

@@ -7,8 +7,8 @@ import { AiOutlineLoading } from 'react-icons/ai';
 import styled from 'styled-components';
 import { instance } from '../../api/axios';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
 
 const Eye = styled(FiEye)`
     font-size: 22px;
@@ -18,8 +18,8 @@ const EyeOff = styled(FiEyeOff)`
 `
 
 const Login = () => {
+    const dispatch = useDispatch();
     const {t} = useTranslation();
-    const navigate = useNavigate();
     const form = useRef();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -38,10 +38,9 @@ const Login = () => {
             }
         ).then(response => {
             if (response.data.token) {
-                localStorage.setItem("admin-auth-token", response.data.token)
                 setIsLoading(false)
                 toast.success(response.data.message);
-                navigate("/admin");
+                dispatch({type: "LOGIN_USER", payload: response.data})
             }
         }).catch(err => {
             setIsLoading(false)

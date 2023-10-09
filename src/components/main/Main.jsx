@@ -4,8 +4,10 @@ import { useEffect, useState, Fragment } from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import ProductCraousel from '../product-carousel/ProductCraousel';
+import { useSelector } from 'react-redux';
 
 const Main = () => {
+  const currentLng = useSelector(state => state.language.lang);
   const [homeReeldata, setHomeReeldata] = useState([]);
 
   useEffect(() => {
@@ -20,7 +22,7 @@ const Main = () => {
         {
           homeReeldata.slice(0, 4).map(category =>
             <Fragment key={uuidv4()}>
-              <h2>{localStorage.getItem("lang") === "uz" ? category.categoryName_uz : category.categoryName_ru}</h2>
+              <h2>{currentLng === "uz" ? category.categoryName_uz : category.categoryName_ru}</h2>
               <ProductCraousel categoryData={category} />
             </Fragment>
           )

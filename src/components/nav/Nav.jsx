@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useDispatch } from 'react-redux';
 import "./Nav.scss";
 import i18n from '../../language/i18next';
 import uzbekFlag from "../../assets/images/uzbek.svg";
@@ -21,11 +22,13 @@ const Mail = styled(FiMail)`
 `;
 
 const Nav = () => {
+    const dispatch = useDispatch();
     const location = useLocation();
     const [languageState, setLanguageState] = useState(localStorage.getItem("lang") || "uz");
     function changeLang(selectedLangCode){
         i18n.changeLanguage(selectedLangCode);
         setLanguageState(selectedLangCode);
+        dispatch({language_code: selectedLangCode, type: "CHANGE_LANGUAGE"})
     }
     return !exceptionalRoutes.includes(location.pathname) ? (
         <nav className='nav'>
