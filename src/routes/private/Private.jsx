@@ -1,11 +1,14 @@
 import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate} from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import AuthContainer from '../auth-container/AuthContainer';
+
 
 const Private = () => {
     const {token} = useSelector(state => state.login);
-    return token ? (
-        <Outlet/> 
+
+    return token  ? (
+        <AuthContainer/>
     ) : <Navigate to="/login"/>
 }
 

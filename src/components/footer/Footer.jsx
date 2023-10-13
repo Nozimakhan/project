@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import footerLogo from '../../assets/images/footerlogo.svg';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-const exceptionalRoutes = ["/login", "/admin"];
+const exceptionalRoutes = ["/login", "/admin", "/admin/order", "/admin/create", "/admin/order/all", "/admin/order/contacted", "/admin/order/not-contacted"];
 
 const Location = styled(HiOutlineLocationMarker)`
     color: #fff;

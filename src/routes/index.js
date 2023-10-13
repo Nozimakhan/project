@@ -10,6 +10,9 @@ import MainCategory from './main-category/MainCategory';
 import ProductView from './product-view/ProductView';
 import SubCategory from './subcategory/SubCategory';
 import Private from './private/Private';
+import Order from './order/Order';
+import Create from './create/Create';
+import OrderDetails from './order-details/OrderDetails';
 
 
 const AllRoutes = () => {
@@ -21,7 +24,12 @@ const AllRoutes = () => {
             <Route path='/partners' element={<Partners />} />
             <Route path='/login' element={<Login />} />
             <Route path='/' element={<Private/>}>
-                <Route path='/admin' element={<Admin />}/>
+                <Route path='/admin' element={<Admin />}>
+                    <Route path="/admin/order" element={<Order/>}>
+                        <Route path='/admin/order/:status' element={<OrderDetails/>}/>
+                    </Route>
+                    <Route path="/admin/create" element={<Create/>}/>
+                </Route>
             </Route>
             <Route path='/mainCategory/:categoryname' element={<MainCategory />} />
             <Route path='/subcategory/:subcategoryname' element={<SubCategory />} />

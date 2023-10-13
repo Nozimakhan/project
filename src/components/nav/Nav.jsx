@@ -7,7 +7,7 @@ import russianFlag from "../../assets/images/russian.png";
 import { Link, useLocation } from 'react-router-dom';
 import { FiMail, FiPhone } from 'react-icons/fi';
 import styled from 'styled-components';
-const exceptionalRoutes = ["/login", "/admin"];
+const exceptionalRoutes = ["/login", "/admin", "/admin/order", "/admin/create", "/admin/order/all", "/admin/order/contacted", "/admin/order/not-contacted"];
 
 const Phone = styled(FiPhone)`
     color: #4361ee;

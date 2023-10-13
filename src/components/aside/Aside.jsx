@@ -24,7 +24,7 @@ const Aside = () => {
             .then(response => setCategoryData(response.data))
             .catch(err => console.log(err))
     }, [])
-    return !location.pathname.includes("product-view") && !location.pathname.includes("partners") && !location.pathname.includes("about") && !location.pathname.includes("contact") ?  (
+    return !location.pathname.includes("product-view") && !location.pathname.includes("partners") && !location.pathname.includes("about") && !location.pathname.includes("contact") && !location.pathname.includes("/admin/order") && !location.pathname.includes("/admin/create") ?  (
         <div className='aside'>
             <p className='aside-header'><Category />Категория</p>
             <ul className='aside__menu'>

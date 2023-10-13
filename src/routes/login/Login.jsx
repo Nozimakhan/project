@@ -9,6 +9,7 @@ import { instance } from '../../api/axios';
 import { toast } from 'react-toastify';
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const Eye = styled(FiEye)`
     font-size: 22px;
@@ -18,8 +19,9 @@ const EyeOff = styled(FiEyeOff)`
 `
 
 const Login = () => {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const form = useRef();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -37,18 +39,22 @@ const Login = () => {
                 password
             }
         ).then(response => {
-            if (response.data.token) {
-                setIsLoading(false)
-                toast.success(response.data.message);
-                dispatch({type: "LOGIN_USER", payload: response.data})
+                if (response.data.token) {
+                    setIsLoading(false)
+                    toast.success(response.data.message);
+                    dispatch({ type: "LOGIN_USER", payload: response.data })
+                    navigate("/admin")
+                }
             }
-        }).catch(err => {
-            setIsLoading(false)
-            toast.error(err.response.data.message)
-        })
+        )
+            .catch(err => {
+                setIsLoading(false)
+                toast.error(err.response.data.message)
+            })
         setUsername("");
         setPassword("");
     }
+
 
     return (
         <div className='login'>

@@ -10,7 +10,7 @@ import { instance } from '../../api/axios';
 import { Link } from 'react-router-dom';
 import errorImg from "../../assets/images/error.png";
 import { useTranslation } from 'react-i18next';
-const exceptionalRoutes = ["/login", "/admin"];
+const exceptionalRoutes = ["/login", "/admin", "/admin/order", "/admin/create", "/admin/order/all", "/admin/order/contacted", "/admin/order/not-contacted"];
 
 const Search = styled(FiSearch)`
   color: #fff;
