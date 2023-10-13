@@ -1,0 +1,198 @@
+.card__wrapper {
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 30px 10px;
+    // margin-left: 30px;
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .24);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: 20px auto;
+    max-height: 300px;
+    min-height: 300px;
+    padding: 20px;
+    width: 100%;
+    max-width: 630px;
+}
+
+.cart-info__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .cart-wrapper {
+        background: linear-gradient(180deg, #bebebe, rgba(0, 0, 0, .51));
+        border-radius: 50%;
+        height: 100px;
+        min-width: 100px;
+        width: 100px;
+        display: grid;
+        place-items: center;
+
+        svg {
+            color: #fff;
+            font-size: 40px;
+        }
+    }
+
+    .cart-contact {
+        align-items: center;
+        display: flex;
+        height: 100px;
+        justify-content: space-between;
+        margin-left: 20px;
+        width: 100%;
+
+        h1 {
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 54px;
+        }
+
+        h2 {
+            color: #0490f5;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 48px;
+        }
+
+        a {
+            align-items: center;
+            background-color: #0ab64f;
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            font-size: 32px;
+            height: 70px;
+            justify-content: center;
+            min-width: 70px;
+            width: 70px;
+
+            svg {
+                width: 32px;
+                height: 32px;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.contacted-info {
+    color: rgb(10, 182, 79);
+    background: rgba(199, 255, 185, 0.34);
+    border: 1px solid rgba(35, 213, 6, 0.39);
+    align-items: center;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin-left: 120px;
+    margin-top: 10px;
+    max-width: 250px;
+    padding: 5px 20px;
+
+    .mark {
+        background-color: #0ab64f;
+        border-radius: 50%;
+        height: 15px;
+        margin-right: 10px;
+        width: 15px;
+    }
+
+}
+
+.cart-time {
+    color: #000;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-top: 10px;
+
+    span {
+        color: #ddbd0b;
+        margin-left: 10px;
+    }
+}
+.cart-price-quantity{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .cart-quantity{
+        color: #000;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 27px;
+        margin-top: 10px;
+        span{
+            color: #0ab64f;
+            margin-left: 10px;
+        }
+    }
+    .cart-price{
+        color: #000;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 27px;
+        margin-top: 5px;
+        span{
+            color: #0ab64f;
+            margin-left: 10px;
+        }
+    }
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .more{
+        background-color: #0490f5; 
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+        height: 45px;
+        margin-right: 10px;
+        margin-top: 20px;
+        padding: 0 30px;
+        transition: .3s;
+    
+    }
+    .contacted-btn{
+        background-color: #0ab64f;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+        height: 45px;
+        margin-right: 10px;
+        margin-top: 20px;
+        padding: 0 30px;
+        transition: .3s;
+        white-space: nowrap;
+    }
+    .delete{
+        background-color: #eb4c4b;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+        height: 45px;
+        margin-right: 10px;
+        margin-top: 20px;
+        padding: 0 30px;
+        transition: .3s;
+        white-space: nowrap;
+    }
+}
